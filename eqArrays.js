@@ -1,11 +1,10 @@
 const eqArrays = function(left, right) {
   for (var i = 0; i < left.length; i++) {
-    if (left[i] === right[i]) {
-      return true;
-     } else { 
-       return false;
-       }
+    if (left[i] !== right[i]) {
+      return false;
+     } 
   }
+  return true
 };
 
 const assertEqual = function(actual, expected) {

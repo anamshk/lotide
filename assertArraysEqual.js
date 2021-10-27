@@ -10,7 +10,7 @@ const eqArrays = function(left, right) {
   return true
 };
 
-const assertEqual = function(actual, expected) {
+const assertArraysEqual = function(actual, expected) {
   if (!eqArrays(actual, expected)) {
     console.log(`😔 , Assertion Failed:, ${actual}, !==, ${expected}`);
   } else {
@@ -18,4 +18,4 @@ const assertEqual = function(actual, expected) {
   }
 
 };
-assertEqual([1, 2, 3] ,[1, 2, 3], true)
+assertArraysEqual([1, 2, 3] ,[1, 3], true)

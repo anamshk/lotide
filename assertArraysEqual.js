@@ -1,13 +1,13 @@
 const eqArrays = function(left, right) {
   if (left.length !== right.length) {
-    return false
+    return false;
   }
-  for (var i = 0; i < left.length; i++) {
+  for (let i = 0; i < left.length; i++) {
     if (left[i] !== right[i]) {
       return false;
-     } 
+    }
   }
-  return true
+  return true;
 };
 
 const assertArraysEqual = function(actual, expected) {
@@ -18,4 +18,4 @@ const assertArraysEqual = function(actual, expected) {
   }
 
 };
-assertArraysEqual([1, 2, 3] ,[1, 3], true)
+assertArraysEqual([1, 2, 3] ,[1, 2, 3], true);

@@ -1,19 +1,12 @@
 const tail = function(array) {
-  if (array.length <= 1) {
-    return [];
-  } else {
-    let newArray = array.splice(1, array.length);
-    return newArray;
-  }
+  let newArray = array.slice(-1);
+  return newArray;
+
 };
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🙂 , Assertion Passed:, ${actual}, ===, ${expected}`);
-  } else {
-    console.log(`😔 , Assertion Failed:, ${actual}, !==, ${expected}`);
-  }
-};
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs");
+
+// const result = tail(["Hello", "Lighthouse", "Labs"]);
+// (result.length, 2); // ensure we get back two elements
+// (result[0], "Lighthouse"); // ensure first element is "Lighthouse"
+// (result[1], "Labs");
+
+module.exports = tail;
